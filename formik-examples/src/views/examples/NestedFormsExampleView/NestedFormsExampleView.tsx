@@ -1,6 +1,6 @@
 import { FieldArray, Form, Formik } from 'formik';
 import React from 'react';
-import { Portal } from '../../../components/Portal';
+import { Modal } from '../../../components/Modal';
 import { USERS } from './constants';
 import './NestedFormsExampleView.css';
 import { User } from './types';
@@ -35,7 +35,7 @@ export const NestedFormsExampleView: React.FC = () => {
                 removeUser={arrayHelpers.remove}
               />
               {formInitialValues && (
-                <Portal>
+                <Modal>
                   <UserForm
                     initialValues={formInitialValues}
                     onSubmit={values => {
@@ -44,7 +44,7 @@ export const NestedFormsExampleView: React.FC = () => {
                     }}
                     onDiscard={hideForm}
                   />
-                </Portal>
+                </Modal>
               )}
             </React.Fragment>
           )}
