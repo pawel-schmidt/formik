@@ -1,0 +1,4 @@
+[build]
+  base    = "formik-examples/"
+  command = "yarn build"
+  publish = "formik-examples/build"
