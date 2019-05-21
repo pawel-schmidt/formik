@@ -2,6 +2,7 @@ import { FieldArray, Form, Formik } from 'formik';
 import React from 'react';
 import { Portal } from '../../../components/Portal';
 import { USERS } from './constants';
+import './NestedFormsExampleView.css';
 import { User } from './types';
 import { UserForm } from './UserForm';
 import { UsersList } from './UsersList';
@@ -11,34 +12,39 @@ export const NestedFormsExampleView: React.FC = () => {
   const [formInitialValues, setFormInitialValues] = React.useState<
     undefined | User
   >(undefined);
+  const showForm = (index: number, values: User) => {
+    setFormInitialValues(values);
+    setRecordUnderEdit(index);
+  };
+  const hideForm = () => {
+    setRecordUnderEdit(-1);
+    setFormInitialValues(undefined);
+  };
   const handleSubmit = () => {
-    alert('sss');
+    // alert('sss');
   };
   return (
     <Formik initialValues={{ users: USERS }} onSubmit={handleSubmit}>
-      <Form>
+      <Form className="example__nested-forms">
         <FieldArray name="users">
           {arrayHelpers => (
             <React.Fragment>
               <UsersList
                 data={arrayHelpers.form.values[arrayHelpers.name]}
-                editUser={(index, values) => {
-                  setFormInitialValues(values);
-                  setRecordUnderEdit(index);
-                }}
-                removeUser={idx => arrayHelpers.remove(idx)}
+                editUser={showForm}
+                removeUser={arrayHelpers.remove}
               />
-              <Portal>
-                {formInitialValues && (
+              {formInitialValues && (
+                <Portal>
                   <UserForm
                     initialValues={formInitialValues}
                     onSubmit={values => {
-                      setFormInitialValues(undefined);
+                      hideForm();
                       arrayHelpers.replace(recordUnderEdit, values);
                     }}
                   />
-                )}
-              </Portal>
+                </Portal>
+              )}
             </React.Fragment>
           )}
         </FieldArray>
