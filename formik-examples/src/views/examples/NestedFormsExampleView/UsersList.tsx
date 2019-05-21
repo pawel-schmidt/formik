@@ -12,7 +12,7 @@ export const UsersList: React.FC<Props> = props => {
   return (
     <React.Fragment>
       {props.data.map((user, idx) => (
-        <div key={idx} className="flex items-center rounded shadow-lg m-4 p-4">
+        <div key={idx} className="flex items-center rounded shadow-lg my-4 p-4">
           <img src={getAvatarUrl(user)} width="32" className="mr-4" />
           <div>
             {user.firstName} {user.lastName}
@@ -20,15 +20,15 @@ export const UsersList: React.FC<Props> = props => {
           <Icon
             name="Edit"
             size={16}
-            className="m-1 p-2 ml-auto"
             rounded
+            className="m-1 p-2 ml-auto"
             onClick={() => props.editUser(idx, user)}
           />
           <Icon
             name="Trash"
             size={16}
-            rounded
             className="m-1 p-2"
+            rounded
             onClick={() => props.removeUser(idx)}
           />
         </div>
