@@ -1,0 +1,22 @@
+.navigation {
+  width: 300px;
+  background: #ddd;
+  min-height: 100%;
+  padding: 20px;
+}
+
+.navigation__link {
+  padding: 10px 10px 10px 20px;
+  font-size: 14px;
+  color: #333;
+}
+
+.navigation__heading {
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+.navigation__active {
+  color: #ed2945;
+}
