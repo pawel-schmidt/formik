@@ -1,16 +1,19 @@
 import React from 'react';
 
 export function usePortal() {
-  const [container, setContainer] = React.useState<null | HTMLDivElement>(null);
+  const ref = React.useRef<HTMLDivElement>();
+  const [_, setReady] = React.useState<boolean>(false);
+
   React.useEffect(() => {
-    const el = document.body.appendChild(document.createElement('div'));
-    setContainer(el);
+    ref.current = document.body.appendChild(document.createElement('div'));
+    setReady(true);
     return () => {
-      setContainer(null);
-      if (container) {
-        document.body.removeChild(container);
+      if (ref.current) {
+        document.body.removeChild(ref.current);
       }
+      setReady(false);
     };
   }, []);
-  return container;
+
+  return ref;
 }
