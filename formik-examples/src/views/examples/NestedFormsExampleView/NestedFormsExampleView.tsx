@@ -42,6 +42,7 @@ export const NestedFormsExampleView: React.FC = () => {
                       hideForm();
                       arrayHelpers.replace(recordUnderEdit, values);
                     }}
+                    onDiscard={hideForm}
                   />
                 </Portal>
               )}

@@ -5,6 +5,7 @@ import { User } from './types';
 interface Props {
   initialValues: User;
   onSubmit(values: User): void;
+  onDiscard?(): void;
 }
 
 export const UserForm: React.FC<Props> = props => {
@@ -49,6 +50,15 @@ export const UserForm: React.FC<Props> = props => {
           >
             Save
           </button>
+          {props.onDiscard && (
+            <button
+              type="button"
+              className="font-bold mx-4 py-2 px-4 rounded"
+              onClick={props.onDiscard}
+            >
+              Discard
+            </button>
+          )}
         </Form>
       </Formik>
     </div>
