@@ -10,3 +10,8 @@ export const USERS: User[] = [
     lastName: 'Palmer',
   },
 ];
+
+export const BLANK_USER: User = {
+  firstName: '',
+  lastName: '',
+};
