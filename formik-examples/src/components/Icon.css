@@ -1,0 +1,21 @@
+.icon {
+  cursor: pointer;
+  transition: all 250ms;
+}
+
+.icon svg {
+  stroke: #999;
+  transition: all 250ms;
+}
+
+.icon--rounded {
+  border-radius: 50%;
+}
+
+.icon--rounded:hover {
+  background: #ddd;
+}
+
+.icon--rounded:hover svg {
+  stroke: #666;
+}

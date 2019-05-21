@@ -1,7 +1,6 @@
 import React from 'react';
+import { Icon } from '../../../components/Icon';
 import { User } from './types';
-const IconEdit = require('react-feather/dist/icons/edit').default;
-const IconTrash = require('react-feather/dist/icons/trash').default;
 
 interface Props {
   data: User[];
@@ -18,17 +17,19 @@ export const UsersList: React.FC<Props> = props => {
           <div>
             {user.firstName} {user.lastName}
           </div>
-          <IconEdit
+          <Icon
+            name="Edit"
             size={16}
+            className="m-1 p-2 ml-auto"
+            rounded
             onClick={() => props.editUser(idx, user)}
-            className="m-2 ml-auto"
-            color="#999"
           />
-          <IconTrash
+          <Icon
+            name="Trash"
             size={16}
+            rounded
+            className="m-1 p-2"
             onClick={() => props.removeUser(idx)}
-            className="m-2"
-            color="#999"
           />
         </div>
       ))}
