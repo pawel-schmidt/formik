@@ -1,6 +1,7 @@
 import React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import { NestedFormsExampleView } from './views/examples/NestedFormsExampleView';
+import { MaskedFieldsExampleView } from './views/examples/MaskedFieldsExampleView';
 
 export interface InnerRouteDefinition {
   path: string;
@@ -25,6 +26,11 @@ export const ROUTES = [
         path: '/examples/nested-forms',
         title: 'Nested forms',
         component: NestedFormsExampleView,
+      },
+      {
+        path: '/examples/masked-fields',
+        title: 'Masked fields',
+        component: MaskedFieldsExampleView,
       },
     ],
   },
