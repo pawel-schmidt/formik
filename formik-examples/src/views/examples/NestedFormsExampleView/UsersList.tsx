@@ -13,7 +13,7 @@ export const UsersList: React.FC<Props> = props => {
     <React.Fragment>
       {props.data.map((user, idx) => (
         <div key={idx} className="flex items-center rounded shadow-lg my-4 p-4">
-          <img src={getAvatarUrl(user)} width="32" className="mr-4" />
+          <img src={getAvatarUrl(user)} width="32" className="mr-4" alt="" />
           <div>
             {user.firstName} {user.lastName}
           </div>
