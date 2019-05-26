@@ -44,9 +44,9 @@ export const MaskedFieldsExampleView: React.FC = props => (
         )}
       </Field>
       <Field>
-        {(formik: any) => (
+        {({ field }: FieldProps<any>) => (
           <PreBlock title="Stored Formik values">
-            {JSON.stringify(formik.field.value, null, 2)}
+            {JSON.stringify(field.value, null, 2)}
           </PreBlock>
         )}
       </Field>
