@@ -1,5 +1,4 @@
 export interface Values {
+  creditCardNumber: string;
   date: string;
-  phone: string;
-  creditCard: string;
 }

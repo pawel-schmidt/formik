@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
-import { FLAT_ROUTES } from './routes';
+import { ROUTES } from './routes';
 import { SideNavigation } from './views/SideNavigation';
 
 export const App: React.FC = () => (
@@ -9,7 +9,7 @@ export const App: React.FC = () => (
     <div className="app">
       <SideNavigation />
       <Switch>
-        {FLAT_ROUTES.map(route => (
+        {ROUTES.map(route => (
           <Route
             key={route.path}
             path={route.path}

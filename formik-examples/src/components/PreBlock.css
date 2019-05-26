@@ -1,0 +1,17 @@
+.pre-block {
+  background: #dedede;
+  font-size: 14px;
+  border-radius: 4px;
+  color: #666;
+}
+
+.pre-block pre {
+  font-size: 14px;
+  padding: 20px;
+}
+
+.pre-block__title {
+  padding: 20px 20px 0;
+  text-transform: uppercase;
+  font-weight: 700;
+}

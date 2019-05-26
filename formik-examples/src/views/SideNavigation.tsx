@@ -9,24 +9,13 @@ export const SideNavigation: React.FC = () => (
     {({ location }) => (
       <div className="navigation">
         {ROUTES.map(route => (
-          <div key={route.path}>
-            <div
-              className={cx('navigation__link', 'navigation__heading', {
-                navigation__active: location.pathname === route.path,
-              })}
-            >
-              <Link to={route.path}>{route.title}</Link>
-            </div>
-            {route.routes.map(route => (
-              <div
-                key={route.path}
-                className={cx('navigation__link', {
-                  navigation__active: location.pathname === route.path,
-                })}
-              >
-                <Link to={route.path}>{route.title}</Link>
-              </div>
-            ))}
+          <div
+            key={route.path}
+            className={cx('navigation__link', {
+              navigation__active: location.pathname === route.path,
+            })}
+          >
+            <Link to={route.path}>{route.title}</Link>
           </div>
         ))}
       </div>
