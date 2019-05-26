@@ -1,6 +1,7 @@
 import { DependentFieldsExampleView } from './views/examples/DependentFieldsExampleView';
 import { MaskedFieldsExampleView } from './views/examples/MaskedFieldsExampleView';
 import { NestedFormsExampleView } from './views/examples/NestedFormsExampleView';
+import { RadioBoxesExampleView } from './views/examples/RadioBoxesExampleView';
 
 export const ROUTES = [
   {
@@ -17,5 +18,10 @@ export const ROUTES = [
     path: '/examples/dependent-fields',
     title: 'Dependent fields',
     component: DependentFieldsExampleView,
+  },
+  {
+    path: '/examples/radio-boxes',
+    title: 'Radio boxes',
+    component: RadioBoxesExampleView,
   },
 ];
