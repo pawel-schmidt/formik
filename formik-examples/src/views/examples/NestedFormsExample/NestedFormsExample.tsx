@@ -2,12 +2,12 @@ import { FieldArray, Form, Formik } from 'formik';
 import React from 'react';
 import { Modal } from '../../../components/Modal';
 import { BLANK_USER, USERS } from './constants';
-import './NestedFormsExampleView.css';
+import './NestedFormsExample.css';
 import { User } from './types';
 import { UserForm } from './UserForm';
 import { UsersList } from './UsersList';
 
-export const NestedFormsExampleView: React.FC = () => {
+export const NestedFormsExample: React.FC = () => {
   const [recordUnderEdit, setRecordUnderEdit] = React.useState(-1);
   const [formValues, setFormValues] = React.useState<undefined | User>(
     undefined

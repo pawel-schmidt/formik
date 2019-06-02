@@ -4,7 +4,7 @@ import { NOTIFICATIONS } from './contants';
 import { Notification } from './types';
 import { PreBlock } from '../../../components/PreBlock';
 
-export const RadioBoxesExampleView: React.FC = () => {
+export const RadioBoxesExample: React.FC = () => {
   const noop = () => {};
   return (
     <Formik initialValues={{ notifications: [] }} onSubmit={noop}>
@@ -27,8 +27,8 @@ export const RadioBoxesExampleView: React.FC = () => {
                   }
                 >
                   All
-                </span>{' '}
-                |{' '}
+                </span>
+                {' | '}
                 <span
                   className="text-blue-500 cursor-pointer"
                   onClick={() => field.onChange(field.name)([])}

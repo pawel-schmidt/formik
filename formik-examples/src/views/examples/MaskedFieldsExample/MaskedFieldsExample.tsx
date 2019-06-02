@@ -8,10 +8,10 @@ import {
   serializeDate,
 } from '../../../helpers/formatters';
 import { INITIAL_VALUES } from './constants';
-import './MaskedFieldsExampleView.css';
+import './MaskedFieldsExample.css';
 import { Values } from './types';
 
-export const MaskedFieldsExampleView: React.FC = props => (
+export const MaskedFieldsExample: React.FC = props => (
   <Formik initialValues={INITIAL_VALUES} onSubmit={() => alert('s')}>
     <Form className="example__masked-fields">
       <Field name="creditCardNumber">

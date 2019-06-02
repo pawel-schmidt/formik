@@ -2,7 +2,7 @@ import { Field, FieldProps, Form, Formik } from 'formik';
 import React from 'react';
 import { PreBlock } from '../../../components/PreBlock';
 import { DATA, INITIAL_VALUES } from './constants';
-import './DependentFieldsExampleView.css';
+import './DependentFieldsExample.css';
 import { Values } from './types';
 
 const BrandOptions: React.FC = () => (
@@ -35,7 +35,7 @@ const ModelOptions: React.FunctionComponent<{ brand: string }> = props => {
   );
 };
 
-export const DependentFieldsExampleView: React.FC = props => (
+export const DependentFieldsExample: React.FC = props => (
   <Formik initialValues={INITIAL_VALUES} onSubmit={() => alert('s')}>
     <Form className="example__dependent-fields">
       <Field name="brand">
