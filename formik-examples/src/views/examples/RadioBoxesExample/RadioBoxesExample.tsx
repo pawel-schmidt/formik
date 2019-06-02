@@ -1,8 +1,7 @@
 import { Field, FieldProps, Form, Formik } from 'formik';
 import React from 'react';
-import { NOTIFICATIONS } from './contants';
-import { Notification } from './types';
 import { PreBlock } from '../../../components/PreBlock';
+import { NOTIFICATIONS } from './contants';
 
 export const RadioBoxesExample: React.FC = () => {
   const noop = () => {};
