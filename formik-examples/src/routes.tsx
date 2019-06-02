@@ -1,7 +1,8 @@
 import { DependentFieldsExample } from './views/examples/DependentFieldsExample';
 import { MaskedFieldsExample } from './views/examples/MaskedFieldsExample';
 import { NestedFormsExample } from './views/examples/NestedFormsExample';
-import { RadioBoxesExample } from './views/examples/RadioBoxesExample';
+import { CheckBoxesExample } from './views/examples/CheckBoxesExample';
+import { RadioExamples } from './views/examples/RadioExamples';
 
 export const ROUTES = [
   {
@@ -20,8 +21,13 @@ export const ROUTES = [
     component: DependentFieldsExample,
   },
   {
+    path: '/examples/check-boxes',
+    title: 'Check boxes',
+    component: CheckBoxesExample,
+  },
+  {
     path: '/examples/radio-boxes',
     title: 'Radio boxes',
-    component: RadioBoxesExample,
+    component: RadioExamples,
   },
 ];

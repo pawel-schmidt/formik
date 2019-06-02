@@ -3,7 +3,7 @@ import React from 'react';
 import { PreBlock } from '../../../components/PreBlock';
 import { NOTIFICATIONS } from './contants';
 
-export const RadioBoxesExample: React.FC = () => {
+export const CheckBoxesExample: React.FC = () => {
   const noop = () => {};
   return (
     <Formik initialValues={{ notifications: [] }} onSubmit={noop}>
