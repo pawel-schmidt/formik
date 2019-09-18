@@ -14,7 +14,7 @@ export const RadioExamples: React.FC = () => {
           <h1 className="text-xl font-bold">What is your favourite drink?</h1>
           {DRINKS.map((tier, index) => (
             <label key={index} className="my-2 mt-8 cursor-pointer">
-              <Field name="ageTier">
+              <Field name="favouriteDrink">
                 {({ field }: FieldProps) => (
                   <input
                     {...field}
